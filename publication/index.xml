@@ -12,5 +12,23 @@
 	<atom:link href="https://ritik99.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>https://ritik99.github.io/publication/person-re-id/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/person-re-id/</guid>
+      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>https://ritik99.github.io/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/clothing-search/</guid>
+      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
+    
   </channel>
 </rss>
