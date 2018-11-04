@@ -7,28 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0530</lastBuildDate>
     
 	<atom:link href="https://ritik99.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title></title>
-      <link>https://ritik99.github.io/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
-      
-      <guid>https://ritik99.github.io/home/hero_carousel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Academic</title>
-      <link>https://ritik99.github.io/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
-      
-      <guid>https://ritik99.github.io/home/hero/</guid>
-      <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
-    </item>
     
     <item>
       <title></title>
@@ -113,14 +95,13 @@ I am interested in theoretical machine learning, and its applications in fields 
     </item>
     
     <item>
-      <title>Teaching</title>
+      <title>Custom Section</title>
       <link>https://ritik99.github.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/teaching/</guid>
       <description>This is an example of using the custom widget to create your own homepage section.
-I am a teaching instructor for the following courses at University X:
- CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
+To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
     </item>
     
     <item>
