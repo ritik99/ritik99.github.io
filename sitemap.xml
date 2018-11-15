@@ -4,6 +4,38 @@
     
     <url>
     
+      <loc>https://ritik99.github.io/project/image-panaroma/</loc>
+      <lastmod>2018-11-10T10:49:36+05:30</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://ritik99.github.io/project/denoising-images/</loc>
+      <lastmod>2018-11-10T10:48:48+05:30</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://ritik99.github.io/project/eigenfaces/</loc>
+      <lastmod>2018-11-10T10:48:17+05:30</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://ritik99.github.io/project/insult-detection/</loc>
+      <lastmod>2018-11-10T10:47:44+05:30</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://ritik99.github.io/post/nlg/</loc>
       <lastmod>2018-11-10T10:32:34+05:30</lastmod>
     </url>
@@ -22,6 +54,15 @@
     
       <loc>https://ritik99.github.io/post/</loc>
       <lastmod>2018-11-10T10:32:34+05:30</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://ritik99.github.io/project/</loc>
+      <lastmod>2018-11-10T10:49:36+05:30</lastmod>
       <priority>0</priority>
     </url>
     
