@@ -54,8 +54,6 @@
       <guid>https://ritik99.github.io/post/nlg/</guid>
       <description>&lt;p&gt;Natural Language Generation (NLG) is characterised as &amp;ldquo;the sub-field of artificial intelligence and computational linguistics that is concerned with the construction of computer systems that can produce understandable tests in English or other human languages from some underlying non-linguistic representation of information&amp;rdquo; (Reiter &amp;amp; Dale, 1997). NLG is one of the earliest topics that researchers started taking interest in.&lt;/p&gt;
 
-&lt;p&gt;Most of this post is based off of this survey paper by Albert Gatt and Emiel Krahmer.&lt;/p&gt;
-
 &lt;p&gt;Following are the most frequent applications of NLG systems:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -67,7 +65,7 @@
 &lt;li&gt;Linguistic realisation: Combining all words and phrases into well-formed sentences&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;All of these topics are fairly complex, and a single blog post would perhaps not do justice to even one of them.&lt;/p&gt;
+&lt;p&gt;All of these topics are fairly complex, and most applications usually involve a combination or all of the above mentioned areas.&lt;/p&gt;
 
 &lt;p&gt;So, in this blogpost I&amp;rsquo;ll be talking about generating puns using Natural Language Generation which involves some parts of all the above stated applications.&lt;/p&gt;
 
@@ -79,9 +77,41 @@
 
 &lt;p&gt;&lt;em&gt;What do you get when you cross a murderer with a breakfast food? A cereal killer.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;While currently there are a couple of innovative and more truly &amp;ldquo;natural&amp;rdquo; methods of generating, the most basic and popular method for generating sentences (and puns) is using a template approach, in which the main context of the sentence is set, while the fillers are derived by the generation model being used. For example, a template might be of the following form: &amp;ldquo;The population of the [country] is [number]&amp;ldquo;, where [country] and [number] are filled in by the model at the run-time. It seems tedious and a little less galmorous, but a large part of the amazing results we see or hear are based on such rule-based methods. For the sake of this post, I will be only considering the case of being able to generate words that sound similar to the an input sentence, while still making sure that the sentence makes sense.&lt;/p&gt;
+&lt;p&gt;As illustrated in the above examples, making puns involves using the fact that there are different meanings for a given word or that there are words that sound similar but hold different meanings.&lt;/p&gt;
 
-&lt;p&gt;The first concept that we would require is edit distance. At the most basic level, the edit distance gives us an approximate idea of the number of changes we would have to make in the spelling one word to get to another word. Words with smaller edit distance are more closer to the other word.&lt;/p&gt;
+&lt;p&gt;While currently there are a couple of innovative and more truly &amp;ldquo;natural&amp;rdquo; methods for generating puns, the most basic and popular method for generating sentences (and puns) is using a template approach, in which the main context of the sentence is set, while the fillers are derived by the generation model being used. For example, a template might be of the following form: &amp;ldquo;The population of the [country] is [number]&amp;ldquo;, where [country] and [number] are filled in by the model at the run-time. It seems tedious and a little less galmorous, but a large part of the amazing results we see or hear are based on such rule-based methods.&lt;/p&gt;
+
+&lt;p&gt;One of the most popular models developed in this field is JAPE (Joke Analysis and Production Engine). JAPE is designed to output question-and-answer type puns from a general lexicon. While seemingly easy at first, the model gets fairly complex, with a number of rules being used for coming up with a valid question and sound answer. An example output of this program is:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Q. What do you call a cry that has pixels?
+A.  A computer scream&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The original paper on this model by Kim Binsted and Graeme Ritchie can be found &lt;a href=&#34;https://arxiv.org/abs/cmp-lg/9406021&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the sake of this post, I will be only considering the case of being able to generate words that sound similar to the an input sentence, while still making sure that the sentence makes sense. This is the most basic method, and can be built upon to make more complex mechanisms.&lt;/p&gt;
+
+&lt;p&gt;The actual idea is pretty simple. I take in a sentence as an input, and barring the stop words, for every other word, I look through a list for words with similar pronounciation and the same POS tag, and then replace it with the best fit. Only those words are considered whose edit distance from the word that is being replaced is below a threshold. Varying this threshold changes how similar the new sentence sounds to the old one.&lt;/p&gt;
+
+&lt;p&gt;The next step was to generate a list containing the pronounciation and the most likely POS tag for each word in our dictionary. This was done using &lt;a href=&#34;http://www.speech.cs.cmu.edu/cgi-bin/cmudict&#34; target=&#34;_blank&#34;&gt;ARPABET&lt;/a&gt;, which is a pronouncing dictionary managed by CMU. Storing the POS tag helps in picking up words that similar sounding to the word we try to replace.&lt;/p&gt;
+
+&lt;p&gt;And that is pretty much it. With a few lines of code, I was happy with the results I was getting. An example:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Input: I am a serial killer.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Output: I am a cereal tiller.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The implementation was pretty simple, and hence the output is, for most of the time, not that great. Of course, increasing the complexity can increase the kind of outputs we get.&lt;/p&gt;
+
+&lt;p&gt;The iPython notebook accompanying this post can be found &lt;a href=&#34;https://github.com/ritik99/NLP-Assignments/blob/master/Pun%20generator.ipynb&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Building a &amp;ldquo;Pun Generator&amp;rdquo; in Python - &lt;a href=&#34;https://www.youtube.com/watch?v=6gJKxe5zPXM&#34; target=&#34;_blank&#34;&gt;https://www.youtube.com/watch?v=6gJKxe5zPXM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PyGotham Talks - &lt;a href=&#34;https://github.com/M0nica/PyGotham-2017-Talks&#34; target=&#34;_blank&#34;&gt;https://github.com/M0nica/PyGotham-2017-Talks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An implementation - &lt;a href=&#34;https://github.com/maxwell-schwartz/PUNchlineGenerator&#34; target=&#34;_blank&#34;&gt;https://github.com/maxwell-schwartz/PUNchlineGenerator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Computational Humor Seminar - &lt;a href=&#34;https://www.cse.iitb.ac.in/~vipulsingh10/me/ComputationalHumourSeminar.pdf&#34; target=&#34;_blank&#34;&gt;https://www.cse.iitb.ac.in/~vipulsingh10/me/ComputationalHumourSeminar.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
