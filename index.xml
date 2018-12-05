@@ -52,7 +52,36 @@
       <pubDate>Sat, 10 Nov 2018 10:32:34 +0530</pubDate>
       
       <guid>https://ritik99.github.io/post/nlg/</guid>
-      <description>&lt;p&gt;Coming soon!&lt;/p&gt;
+      <description>&lt;p&gt;Natural Language Generation (NLG) is characterised as &amp;ldquo;the sub-field of artificial intelligence and computational linguistics that is concerned with the construction of computer systems that can produce understandable tests in English or other human languages from some underlying non-linguistic representation of information&amp;rdquo; (Reiter &amp;amp; Dale, 1997). NLG is one of the earliest topics that researchers started taking interest in.&lt;/p&gt;
+
+&lt;p&gt;Most of this post is based off of this survey paper by Albert Gatt and Emiel Krahmer.&lt;/p&gt;
+
+&lt;p&gt;Following are the most frequent applications of NLG systems:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Content determination: Determining what kind of information to include while preparing a document&lt;/li&gt;
+&lt;li&gt;Text structuring: Determining the sequence in which information is supposed to appear&lt;/li&gt;
+&lt;li&gt;Sentence aggregation: Deciding information which should be displayed together&lt;/li&gt;
+&lt;li&gt;Lexicalisation: Finding the right words and phrases to express information&lt;/li&gt;
+&lt;li&gt;Referring expression generation: Selecting the words and phrases to identify domain objects&lt;/li&gt;
+&lt;li&gt;Linguistic realisation: Combining all words and phrases into well-formed sentences&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All of these topics are fairly complex, and a single blog post would perhaps not do justice to even one of them.&lt;/p&gt;
+
+&lt;p&gt;So, in this blogpost I&amp;rsquo;ll be talking about generating puns using Natural Language Generation which involves some parts of all the above stated applications.&lt;/p&gt;
+
+&lt;p&gt;Generating puns falls under the field known as computational humor, which is a branch of computational linguistics focused on humor research (there have also been dedicated conferences for this field!).&lt;/p&gt;
+
+&lt;p&gt;For those of you who don&amp;rsquo;t know what puns are, here are a few punny ones-&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I was going to make myself a belt made out of watches, but then I realized it would be a waist of time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What do you get when you cross a murderer with a breakfast food? A cereal killer.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While currently there are a couple of innovative and more truly &amp;ldquo;natural&amp;rdquo; methods of generating, the most basic and popular method for generating sentences (and puns) is using a template approach, in which the main context of the sentence is set, while the fillers are derived by the generation model being used. For example, a template might be of the following form: &amp;ldquo;The population of the [country] is [number]&amp;ldquo;, where [country] and [number] are filled in by the model at the run-time. It seems tedious and a little less galmorous, but a large part of the amazing results we see or hear are based on such rule-based methods. For the sake of this post, I will be only considering the case of being able to generate words that sound similar to the an input sentence, while still making sure that the sentence makes sense.&lt;/p&gt;
+
+&lt;p&gt;The first concept that we would require is edit distance. At the most basic level, the edit distance gives us an approximate idea of the number of changes we would have to make in the spelling one word to get to another word. Words with smaller edit distance are more closer to the other word.&lt;/p&gt;
 </description>
     </item>
     
