@@ -91,7 +91,7 @@
     "section": "post",
     "summary": "Natural Language Generation (NLG) is characterised as \u0026ldquo;the sub-field of artificial intelligence and computational linguistics that is concerned with the construction of computer systems that can produce understandable tests in English or other human languages from some underlying non-linguistic representation of information\u0026rdquo; (Reiter \u0026amp; Dale, 1997). NLG is one of the earliest topics that researchers started taking interest in.\nFollowing are the most frequent applications of NLG systems:\n Content determination: Determining what kind of information to include while preparing a document Text structuring: Determining the sequence in which information is supposed to appear Sentence aggregation: Deciding information which should be displayed together Lexicalisation: Finding the right words and phrases to express information Referring expression generation: Selecting the words and phrases to identify domain objects Linguistic realisation: Combining all words and phrases into well-formed sentences  All of these topics are fairly complex, and most applications usually involve a combination or all of the above mentioned areas.",
     "tags": [],
-    "title": "An Introduction to Natural Language Generation",
+    "title": "Natural Language Generation - Generating Puns",
     "type": "post"
   }
 ]
