@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.0.0">
+  <meta name="generator" content="Hugo 0.50" />
+  <meta name="author" content="Ritik Dutta">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="There have been many advances in the field of Machine Learning in the recent years, but considering how data-intensive this field is (especially deep learning), most of these advances will fall short if the back-end infrastructure is not robust enough to handle large scale data. While increase in compute power has helped in the advancement of this field, an equal amount of innovation has been necessary in how the data is managed.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://ritik99.github.io/post/data/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://ritik99.github.io/index.xml" type="application/rss+xml" title="Ritik">
+  <link rel="feed" href="https://ritik99.github.io/index.xml" type="application/rss+xml" title="Ritik">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://ritik99.github.io/post/data/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@DuttaRitik">
+  <meta property="twitter:creator" content="@DuttaRitik">
+  
+  <meta property="og:site_name" content="Ritik">
+  <meta property="og:url" content="https://ritik99.github.io/post/data/">
+  <meta property="og:title" content="Data Management in Machine Learning | Ritik">
+  <meta property="og:description" content="There have been many advances in the field of Machine Learning in the recent years, but considering how data-intensive this field is (especially deep learning), most of these advances will fall short if the back-end infrastructure is not robust enough to handle large scale data. While increase in compute power has helped in the advancement of this field, an equal amount of innovation has been necessary in how the data is managed.">
+  
+  
+    
+  <meta property="og:image" content="https://ritik99.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-03-25T14:07:50&#43;05:30">
+  
+  <meta property="article:modified_time" content="2019-03-25T14:07:50&#43;05:30">
+  
+
+  
+
+  
+
+  <title>Data Management in Machine Learning | Ritik</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Ritik</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Data Management in Machine Learning</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ritik Dutta">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2019-03-25 14:07:50 &#43;0530 IST" itemprop="datePublished">
+    <time datetime="2019-03-25 14:07:50 &#43;0530 IST" itemprop="dateModified">
+      Mar 25, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ritik Dutta">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Data%20Management%20in%20Machine%20Learning&amp;url=https%3a%2f%2fritik99.github.io%2fpost%2fdata%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fritik99.github.io%2fpost%2fdata%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fritik99.github.io%2fpost%2fdata%2f&amp;title=Data%20Management%20in%20Machine%20Learning"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fritik99.github.io%2fpost%2fdata%2f&amp;title=Data%20Management%20in%20Machine%20Learning"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Data%20Management%20in%20Machine%20Learning&amp;body=https%3a%2f%2fritik99.github.io%2fpost%2fdata%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>There have been many advances in the field of Machine Learning in the recent years, but considering how data-intensive this field is (especially deep learning), most of these advances will fall short if the back-end infrastructure is not robust enough to handle large scale data. While increase in compute power has helped in the advancement of this field, an equal amount of innovation has been necessary in how the data is managed. The database community has been actively working on tackling data management-related challenges that arise in large-scale machine learning systems.</p>
+
+<p>In this post I will be covering some of the recent advances that have been made with regards to ML-oriented database systems, and end with some open problems which still lack good solutions. This post is mainly based on <a href="https://adalabucsd.github.io/papers/2017_Tutorial_SIGMOD.pdf" target="_blank">this paper</a> by Kumar et. al. This post is intended to serve as a reference guide for the interested readers to exlpore various popular systems that have been developed to serve the needs of large scale ML systems. I will be linking relevant source pages and research papers for the systems that I mention throughout this post.</p>
+
+<p>Ever since the data mining boom of the late 1990s and early 2000s, the database community has been working on data management-oriented challenges in ML. A number of systems have therefore been developed for scalable and fast ML, some of which I will be referring to in this article.</p>
+
+<p>The development in the ML-oriented DB systems is mainly oriented along three lines of work:</p>
+
+<ol>
+<li>Integrating ML algorithms and languages with existing data systems such as RDBMSs</li>
+<li>Adapting data management-inspired techniques such as query optimisation</li>
+<li>Combining data management and ML ideas to build systems that improve ML lifecycle-related tasks</li>
+</ol>
+
+<h4 id="ml-in-data-systems">ML in Data Systems</h4>
+
+<p>ML computations can be integrated with an RDBMS to bring it closer to where the data resides. This avoids the cost of having to move the data to specialised ML toolkits. Below listed are some of the methods used to achieve this:</p>
+
+<ol>
+<li>Earlier scalable ML techniques exploited user-defined function (UDF) and user-defined aggregate (UDA) abstractions in data systems. Examples of these kind of systems are ATLAS, in-RDBMS ML libraries such as Oracle Data Mining and GLADE.
+
+<ol>
+<li><a href="http://www.vldb.org/conf/2003/papers/S37P01.pdf" target="_blank">ATLAS</a> - DBMSs have long suffered from SQL’s lack of power and extensibility. ATLAS is a powerful database language and system that enables users to develop complete data-intensive applications in SQL by writing new aggregates and table functions in SQL rather than in procedural languages.</li>
+<li><a href="http://faculty2.ucmerced.edu/frusu/Papers/Conference/2012-sigmod-glade-demo.pdf" target="_blank">GLADE</a> - GLADE is a scalable distributed framework for large scale data analytics. GLADE arised out of the need to serve the requirements of companies that wanted to apply statistics and machine learning methods on data, since SQL and other relational DB systems do not support it directly.</li>
+</ol></li>
+<li>Efforts have also been made to integrate ML with data systems by optimising ML over datasets that are logically the output relational queries, especially, joins. <a href="https://adalabucsd.github.io/papers/2015_Orion_SIGMOD.pdf" target="_blank">Orion</a> is one such example, which introduced &ldquo;factorised learning&rdquo; to push generalised linear models through joins to avoid redundancy in ML computations.</li>
+<li>RDBMSs can also be used to support complex mutli-relational ML models known as statistical relational learning. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5361060/pdf/nihms826683.pdf" target="_blank">DeepDive</a> is an example of such a system, which exploits the advanced join processing capabilities of RDBMSs to scale inference systems which makes it possible to apply such methods to large-scale databases.</li>
+<li>To help the users focus more on the learning task at hand, some systems have been developed to provide higher levels of abstractions to simplify the development and customisation of ML algorithms. These systems work by either generating SQL queries or generating jobs for data-parallel frameworks such as Spark or Hadoop. An example of such a system is <a href="https://arxiv.org/pdf/0909.1766.pdf" target="_blank">Riot-DB</a>.</li>
+</ol>
+
+<h4 id="db-inspired-ml-systems">DB-INSPIRED ML SYSTEMS</h4>
+
+<p>This section covers systems and domain-specific languages (DSLs) inspired by databases, programming languages and high-performance computing.</p>
+
+<ol>
+<li>A number of state-of-the-art optimising compilers for ML algorithms like <a href="https://pdfs.semanticscholar.org/0a9d/a717999ba687bcbef86cbc996f4b7334f990.pdf" target="_blank">SystemML</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.1967&amp;rep=rep1&amp;type=pdf" target="_blank">OptiML</a>, rely on simplification rewrites.</li>
+<li>Modern in-memory database systems often apply query compilation. <a href="https://pdfs.semanticscholar.org/0a9d/a717999ba687bcbef86cbc996f4b7334f990.pdf" target="_blank">SystemML</a> introduced a holistic framework for automatic rewrite identification and operator fusion, including the generation of sparsity-exploiting operators.</li>
+<li>Since manly ML algorithms are iterative and perform repeated matrix-vector multiplications, systems like <a href="https://pdfs.semanticscholar.org/0a9d/a717999ba687bcbef86cbc996f4b7334f990.pdf" target="_blank">SystemML</a> employ lightweight database compression techniques and execute linear algebra operations directly on the compressed matrix representation.</li>
+</ol>
+
+<h4 id="ml-lifecycle-systems">ML LIFECYCLE SYSTEMS</h4>
+
+<p>This section covers advances in tasks such as model selection and model management, which apply ideas which are databases oriented, such as declarativity, interactivity, and optimisation.</p>
+
+<ol>
+<li>Feature Engineering - Feature engineering is often the most time-consuming part of an applied ML project. Advances in this domain involve using database-inspired ideas such as indexing and partitioning to read only parts of the data so that the access times are reduced. <a href="https://web.eecs.umich.edu/~michjc/papers/ICDE16_research_459.pdf" target="_blank">Zombie</a> is one such implementation. <a href="http://shivaram.org/publications/keystoneml-icde17.pdf" target="_blank">KeystoneML</a> provides libraries for certain forms of featurisation and optimises pipelines of ML operators over Spark. <a href="https://adalabucsd.github.io/papers/2016_Hamlet_SIGMOD.pdf" target="_blank">Hamlet</a> applies statistical learning theory to exploit database dependencies to drop features before using the data for learning the model without significantly affecting the accuracy.</li>
+<li>Model Selection and Management - It is the process of obtaining the most appropriate machine learning model with respect to the learning task at hand. There have been a couple of attempts to automate this process. <a href="http://cidrdb.org/cidr2011/Papers/CIDR11_Paper20.pdf" target="_blank">Longview</a> integrates model management into a DBMS to automate certain aspects of model selection, <a href="https://arxiv.org/pdf/1611.06224.pdf" target="_blank">ModelHub</a> proposed a language and storage manager for managing deep NNs which are common in computer vision, and <a href="https://mitdbg.github.io/modeldb/papers/hilda_modeldb.pdf" target="_blank">ModelDB</a> instruments ML libraries to capture and manage models. There are several cloud ML services as well, such as Mircosoft’s AzureML which aims to simplify and manage end-to-end ML workflows.</li>
+</ol>
+
+<h4 id="open-problems">Open Problems</h4>
+
+<ol>
+<li>Size and Sparsity estimation: Many optimization techniques require prior knowledge of the size and sparsity of matrices for cost comparisons and valid plan generation. However, it turns out that this task is non-trivial for programs to infer in complex methods involving linear algebra. Therefore, principled techniques are required for estimating the size and sparsity of matrices in data.</li>
+<li>Convergence estimation: Most ML algorithms involve finding the most optimal solution in an iterative fashion, in which the algorithm tries to converge to the optimal solution over a number of steps. Knowing the number of steps that it would take for the algorithm to converge would help in better resource allocation, and for optimising data re-organisations. It would also help in estimating the amount of progress that has been made towards reaching the optimal solution.</li>
+<li>Adaptive Query processing and storage: Generally, in case the workloads changes frequently, adaptive query processing and storage techniques are used to handle the workload.</li>
+<li>Integrating Relational and Linear Algebra: A seamless integration of relational and linear algebra is required so that users can easily perform data transformations for feature engineering such as joins and aggregates, and training and prediction of different ML models.</li>
+<li>ML system benchmarks: Benchmarks that compare the implementation of very large scale machine learning systems would be very helpful. There already exist some benchmarks that try to address this, such as <a href="http://cmj4.web.rice.edu/performance.pdf" target="_blank">this paper</a> by Cai et. al. However, even this paper only uses four different platforms such as Spark and SimSQL. A more comprehensive survey would be highly beneficial.</li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Ritik Dutta</a></h5>
+    <h6 class="card-subtitle">Computer Science &amp; Engineering Undergraduate</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      <li>
+        <a itemprop="sameAs" href="mailto:dutta.ritik@iitgn.ac.in" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/DuttaRitik" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/ritik99" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/files/cv.pdf" >
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
