@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 on Ritik</title>
+    <link>https://ritik99.github.io/publication_types/2/</link>
+    <description>Recent content in 2 on Ritik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ritik99.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generation and evaluation of privacy preserving synthetic health data</title>
+      <link>https://ritik99.github.io/publication/neurocomp-2020/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/neurocomp-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Causal discovery toolbox: uncovering causal relationships in Python</title>
+      <link>https://ritik99.github.io/publication/jmlr-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/jmlr-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

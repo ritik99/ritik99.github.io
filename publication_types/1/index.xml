@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 on Ritik</title>
+    <link>https://ritik99.github.io/publication_types/1/</link>
+    <description>Recent content in 1 on Ritik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ritik99.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Effect of Feature Hashing on Fair Classification</title>
+      <link>https://ritik99.github.io/publication/cods-2020/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/cods-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synthetic Event Time Series Health Data Generation</title>
+      <link>https://ritik99.github.io/publication/neurips-2019/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/neurips-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing privacy and quality of synthetic health data</title>
+      <link>https://ritik99.github.io/publication/aidr-2019/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/aidr-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy preserving synthetic health data</title>
+      <link>https://ritik99.github.io/publication/esann-2019/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/esann-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

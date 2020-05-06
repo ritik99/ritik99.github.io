@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Ritik</title>
+    <link>https://ritik99.github.io/publication/</link>
+    <description>Recent content in Publications on Ritik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ritik99.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generation and evaluation of privacy preserving synthetic health data</title>
+      <link>https://ritik99.github.io/publication/neurocomp-2020/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/neurocomp-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effect of Feature Hashing on Fair Classification</title>
+      <link>https://ritik99.github.io/publication/cods-2020/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/cods-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Causal discovery toolbox: uncovering causal relationships in Python</title>
+      <link>https://ritik99.github.io/publication/jmlr-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/jmlr-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproducibility Challenge NeurIPS 2019 Report</title>
+      <link>https://ritik99.github.io/publication/repro-2019/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/repro-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synthetic Event Time Series Health Data Generation</title>
+      <link>https://ritik99.github.io/publication/neurips-2019/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/neurips-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing privacy and quality of synthetic health data</title>
+      <link>https://ritik99.github.io/publication/aidr-2019/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/aidr-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy preserving synthetic health data</title>
+      <link>https://ritik99.github.io/publication/esann-2019/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://ritik99.github.io/publication/esann-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

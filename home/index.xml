@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 23 Jul 2018 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jul 2018 00:00:00 +0530</lastBuildDate>
     
 	<atom:link href="https://ritik99.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>https://ritik99.github.io/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/hero_carousel/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Academic</title>
       <link>https://ritik99.github.io/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
@@ -33,17 +33,19 @@
     <item>
       <title></title>
       <link>https://ritik99.github.io/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/about/</guid>
-      <description>Biography I am Ritik Dutta, a senior Computer Science undergraduate at IIT Gandhinagar, India. Since April 2018, I have been working as an intern for Dr. Isabelle Guyon and Dr. Kristin Bennett, first at ChaLearn and then at INRIA Saclay.
-I am also a maintainer for the Causal Discovery Toolbox (CDT), a Python package for causal inference in graphs and pairwise settings. Documentation for the package can be found here.</description>
+      <description>Biography I am a senior Computer Science undergraduate at IIT Gandhinagar, India.
+I am broadly interested in machine learning. My research projects have been focused on topics such as privacy-preserving machine learning, evaluating the effectiveness of generative models and observational causal discovery. I am also interested in computational biology and reinforcement learning.
+I&amp;rsquo;ve had the pleasure of interning at:
+ Inria Paris Saclay, summer 2019 with Prof. Isabelle Guyon and Prof.</description>
     </item>
     
     <item>
       <title>Skills</title>
       <link>https://ritik99.github.io/home/skills/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/skills/</guid>
       <description></description>
@@ -59,18 +61,9 @@ I am also a maintainer for the Causal Discovery Toolbox (CDT), a Python package 
     </item>
     
     <item>
-      <title>Selected Publications</title>
-      <link>https://ritik99.github.io/home/publications_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://ritik99.github.io/home/publications_selected/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Publications</title>
+      <title>Publications</title>
       <link>https://ritik99.github.io/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/publications/</guid>
       <description></description>
@@ -79,7 +72,7 @@ I am also a maintainer for the Causal Discovery Toolbox (CDT), a Python package 
     <item>
       <title>Selected Talks</title>
       <link>https://ritik99.github.io/home/talks_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/talks_selected/</guid>
       <description></description>
@@ -88,44 +81,25 @@ I am also a maintainer for the Causal Discovery Toolbox (CDT), a Python package 
     <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://ritik99.github.io/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recent Posts</title>
+      <title>Posts</title>
       <link>https://ritik99.github.io/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://ritik99.github.io/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://ritik99.github.io/home/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Custom Section</title>
-      <link>https://ritik99.github.io/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://ritik99.github.io/home/teaching/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
-    </item>
-    
-    <item>
       <title>Tags</title>
       <link>https://ritik99.github.io/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/tags/</guid>
       <description></description>
@@ -134,18 +108,9 @@ To remove this section, either delete content/home/teaching.md or edit the front
     <item>
       <title>Search</title>
       <link>https://ritik99.github.io/home/search/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0530</pubDate>
       
       <guid>https://ritik99.github.io/home/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ritik99.github.io/home/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ritik99.github.io/home/contact/</guid>
       <description></description>
     </item>
     
